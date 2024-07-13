@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: typ_query/query.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -19,22 +23,6 @@ enum Query_ValueOf {
 }
 
 class Query extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Query_ValueOf> _Query_ValueOfByTag = {
-    3 : Query_ValueOf.keyword,
-    4 : Query_ValueOf.queries,
-    0 : Query_ValueOf.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Query', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'typ_query'), createEmptyInstance: create)
-    ..oo(0, [3, 4])
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'searchType')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'targetType')
-    ..aOM<$2.Keyword>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'keyword', subBuilder: $2.Keyword.create)
-    ..aOM<Queries>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'queries', subBuilder: Queries.create)
-    ..pc<$3.Leveler>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'levels', $pb.PbFieldType.PM, subBuilder: $3.Leveler.create)
-    ..hasRequiredFields = false
-  ;
-
-  Query._() : super();
   factory Query({
     $core.String? searchType,
     $core.String? targetType,
@@ -42,26 +30,43 @@ class Query extends $pb.GeneratedMessage {
     Queries? queries,
     $core.Iterable<$3.Leveler>? levels,
   }) {
-    final _result = create();
+    final $result = create();
     if (searchType != null) {
-      _result.searchType = searchType;
+      $result.searchType = searchType;
     }
     if (targetType != null) {
-      _result.targetType = targetType;
+      $result.targetType = targetType;
     }
     if (keyword != null) {
-      _result.keyword = keyword;
+      $result.keyword = keyword;
     }
     if (queries != null) {
-      _result.queries = queries;
+      $result.queries = queries;
     }
     if (levels != null) {
-      _result.levels.addAll(levels);
+      $result.levels.addAll(levels);
     }
-    return _result;
+    return $result;
   }
+  Query._() : super();
   factory Query.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Query.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Query_ValueOf> _Query_ValueOfByTag = {
+    3 : Query_ValueOf.keyword,
+    4 : Query_ValueOf.queries,
+    0 : Query_ValueOf.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Query', package: const $pb.PackageName(_omitMessageNames ? '' : 'typ_query'), createEmptyInstance: create)
+    ..oo(0, [3, 4])
+    ..aOS(1, _omitFieldNames ? '' : 'searchType')
+    ..aOS(2, _omitFieldNames ? '' : 'targetType')
+    ..aOM<$2.Keyword>(3, _omitFieldNames ? '' : 'keyword', subBuilder: $2.Keyword.create)
+    ..aOM<Queries>(4, _omitFieldNames ? '' : 'queries', subBuilder: Queries.create)
+    ..pc<$3.Leveler>(5, _omitFieldNames ? '' : 'levels', $pb.PbFieldType.PM, subBuilder: $3.Leveler.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -71,8 +76,10 @@ class Query extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Query copyWith(void Function(Query) updates) => super.copyWith((message) => updates(message as Query)) as Query; // ignore: deprecated_member_use
+  Query copyWith(void Function(Query) updates) => super.copyWith((message) => updates(message as Query)) as Query;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Query create() => Query._();
   Query createEmptyInstance() => create();
@@ -129,28 +136,29 @@ class Query extends $pb.GeneratedMessage {
 }
 
 class Queries extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Queries', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'typ_query'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operant')
-    ..pc<Query>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'queries', $pb.PbFieldType.PM, subBuilder: Query.create)
-    ..hasRequiredFields = false
-  ;
-
-  Queries._() : super();
   factory Queries({
     $core.String? operant,
     $core.Iterable<Query>? queries,
   }) {
-    final _result = create();
+    final $result = create();
     if (operant != null) {
-      _result.operant = operant;
+      $result.operant = operant;
     }
     if (queries != null) {
-      _result.queries.addAll(queries);
+      $result.queries.addAll(queries);
     }
-    return _result;
+    return $result;
   }
+  Queries._() : super();
   factory Queries.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Queries.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Queries', package: const $pb.PackageName(_omitMessageNames ? '' : 'typ_query'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'operant')
+    ..pc<Query>(2, _omitFieldNames ? '' : 'queries', $pb.PbFieldType.PM, subBuilder: Query.create)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -160,8 +168,10 @@ class Queries extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Queries copyWith(void Function(Queries) updates) => super.copyWith((message) => updates(message as Queries)) as Queries; // ignore: deprecated_member_use
+  Queries copyWith(void Function(Queries) updates) => super.copyWith((message) => updates(message as Queries)) as Queries;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Queries create() => Queries._();
   Queries createEmptyInstance() => create();
@@ -183,3 +193,6 @@ class Queries extends $pb.GeneratedMessage {
   $core.List<Query> get queries => $_getList(1);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
