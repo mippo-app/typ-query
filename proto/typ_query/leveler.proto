@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package typ_query;
+option go_package = "gitlab.com/mippo.app/typ-query.git/go/pb/typ_query";
+
+
+import "typ_query/keyword.proto";
+
+
+message Leveler {
+  map<string, Keyword> keywordMap = 2;
+}

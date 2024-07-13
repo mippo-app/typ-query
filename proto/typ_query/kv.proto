@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package typ_query;
+option go_package = "gitlab.com/mippo.app/typ-query.git/go/pb/typ_query";
+
+
+import "typ_p/value.proto";
+
+enum KvOp {
+  KV_OP_UNKNOWN = 0;
+  KV_OP_EQ = 1;
+}
+
+message Kv {
+  string key = 2;
+  string operant = 3;
+
+  typ_p.value value = 20;
+}

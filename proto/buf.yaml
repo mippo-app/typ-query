@@ -1,0 +1,11 @@
+version: v1
+name: buf.build/yoffa/typ-query
+deps:
+- buf.build/yoffa/typ-p
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT
+# buf push

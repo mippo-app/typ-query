@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package typ_query;
+option go_package = "gitlab.com/mippo.app/typ-query.git/go/pb/typ_query";
+
+
+import "typ_query/kv.proto";
+
+
+message Keyword {
+  oneof value_of {
+    Kv kv = 1;
+    Keywords keywords = 2;
+  }
+}
+
+message Keywords {
+  string operant = 1;
+  repeated Keyword keywords = 2;
+}
+
