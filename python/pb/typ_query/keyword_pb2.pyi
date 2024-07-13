@@ -7,7 +7,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Keyword(_message.Message):
-    __slots__ = ["kv", "keywords"]
+    __slots__ = ("kv", "keywords")
     KV_FIELD_NUMBER: _ClassVar[int]
     KEYWORDS_FIELD_NUMBER: _ClassVar[int]
     kv: _kv_pb2.Kv
@@ -15,7 +15,7 @@ class Keyword(_message.Message):
     def __init__(self, kv: _Optional[_Union[_kv_pb2.Kv, _Mapping]] = ..., keywords: _Optional[_Union[Keywords, _Mapping]] = ...) -> None: ...
 
 class Keywords(_message.Message):
-    __slots__ = ["operant", "keywords"]
+    __slots__ = ("operant", "keywords")
     OPERANT_FIELD_NUMBER: _ClassVar[int]
     KEYWORDS_FIELD_NUMBER: _ClassVar[int]
     operant: str

@@ -7,14 +7,14 @@ from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Opti
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class KvOp(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-    __slots__ = []
+    __slots__ = ()
     KV_OP_UNKNOWN: _ClassVar[KvOp]
     KV_OP_EQ: _ClassVar[KvOp]
 KV_OP_UNKNOWN: KvOp
 KV_OP_EQ: KvOp
 
 class Kv(_message.Message):
-    __slots__ = ["key", "operant", "value"]
+    __slots__ = ("key", "operant", "value")
     KEY_FIELD_NUMBER: _ClassVar[int]
     OPERANT_FIELD_NUMBER: _ClassVar[int]
     VALUE_FIELD_NUMBER: _ClassVar[int]

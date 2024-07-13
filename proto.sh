@@ -17,3 +17,7 @@ protoc --dart_out=grpc,generate_kythe_info:./dart/lib/pb/ \
 # dart pub global activate protoc_plugin
 
 find ./dart/lib/pb/ -type f -name "*.dart" -print0 | xargs -0 sed -i '' 's/\.\.\/typ_p\//package\:typ_p\/pb\/typ_p\//g'
+
+python -m grpc_tools.protoc \
+  -Iproto/ -I../typ-p/proto/ --python_out=./python/pb/  --pyi_out=./python/pb/  \
+  $(find proto/ -iname "*.proto")
